@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class NavigationSystemGUI implements ActionListener {
-
+    //ab hier nicht weiterles
     private JFrame frame;
     private JPanel menuPanel, ausgabePanel, kurzDistPanel, sperrePanel, sperreListPanel, neueStrPanel, neueSperrPanel;
     private CardLayout cardLayout;
