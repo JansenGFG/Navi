@@ -3,10 +3,11 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class NavigationSystemGUI implements ActionListener {
-    //ab hier nicht weiterles
+    
     private JFrame frame;
     private JPanel menuPanel, ausgabePanel, kurzDistPanel, sperrePanel, sperreListPanel, neueStrPanel, neueSperrPanel;
     private CardLayout cardLayout;
+    private JCheckBox beidseitigCheckSperr, beidseitigCheckNeu;
 
     public NavigationSystemGUI() {
         frame = new JFrame("Navi");
@@ -56,11 +57,13 @@ public class NavigationSystemGUI implements ActionListener {
         menuButtonNeuVer.addActionListener(this);
         JButton neuVerbBesButton = new JButton("Neue Verbindung Bestaetigen");
         neuVerbBesButton.addActionListener(this);
+        beidseitigCheckNeu = new JCheckBox("In beide Richtungen?",true);
 
         neueStrPanel = new JPanel();
+        neueStrPanel.add(beidseitigCheckNeu);
         neueStrPanel.add(neuVerbBesButton);
         neueStrPanel.add(menuButtonNeuVer);
-        neueStrPanel.setLayout(new GridLayout(2, 1, 50, 40));
+        neueStrPanel.setLayout(new GridLayout(3, 1, 50, 40));
         
         JButton distBerechnButton = new JButton("Schnellsten Weg Berechnen");
         distBerechnButton.addActionListener(this);
